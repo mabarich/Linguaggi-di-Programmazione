@@ -1,0 +1,48 @@
+:: 				- Tipo
+let				- Var di ML
+\=				- Diverso
+`mod`			- Resto
+[a,b,c]			- Lista
+a:b				- Concatenazione di liste
+!!i				- Accesso a posizioni della lista
+head a			- Primo elemento della lista
+tail a			- Dal secondo elemento della lista
+last a			- Ultimo elemento della lista
+init a			- Fino al penultimo elemento della lista
+null a			- Guarda se ho lista vuota
+take a b		- Prende i primi a elementi da b
+drop a b 		- Toglie i primi a elementi da b
+a `elem` b		- Guarda se ho a in b
+a..b			- Range da a a b (posso specificare i salti! 2,4..20)
+a.. 			- Lista infinita (calcola solo quello che serve)
+cycle a			- Concatena all'infinito a
+repeat a		- Ripete all'infinito a
+[a | b,c]		- Insiemi [2*x | x>10,x<20]. a è una funzione (2*x, if x>10 then 10 else x, ecc...)
+(a,b)			- Tuple. Tuple in una lista devono avere la stessa lunghezza e stesso tipo
+fst a			- Primo elemento della tupla di 2 elementi
+snd a			- Secondo elemento della tupla di 2 elementi
+:t a			- Tipo di a
+a: t1 -> t2		- Tipo della funzione a
+[char]			- Stringa
+::a				- Tipo generico, come 'a in ML				
+Typeclasses 	- Interfacce di Java
+(Eq a)=>.....	- a tipo generico, ma deve implementare la Typeclass Eq perché necessita delle uguaglianze
+	Eq			- Per tipi che necessitano l'uguaglianza (== e \=)
+	Ord			- Per tipi che necessitano l'ordinamento (>, >=, < e <=)
+	Show		- Per tipi che necessitano la stampa come stringa => show a
+	Num			- Per tipi che necessitano di comportarsi come numeri
+		Integral 
+		Floating
+nome a			|
+nome b			|
+nome c			|- Pattern Matching. L'ultimo è il default. Usato per tipi, non per valori.
+_				- Qualsiasi cosa 
+a@b:c			- Nome a alla lista b:c
+| a <= b		|
+| a <= c		|
+| otherwise   	|- Guardie. Come pattern, ma si usano per valori. Devono essere tutte allineate
+where			- Posso definirci variabili da usare solo localmente (a funzioni, insiemi, pattern o guardie). Anche i nomi devono essere allineati
+let a in b		- Come il where, ma un po' più locale
+case x of a->b	|
+		  c->d	|-Switch
+
