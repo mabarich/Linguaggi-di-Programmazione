@@ -1,5 +1,4 @@
 module Analizzatore_sint_2(
---progdoll,dd) where
 progdoll,d,prog_one) where
 
 import Lexer
